@@ -16,6 +16,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Free disk space
+      run: curl -fsSL https://raw.githubusercontent.com/kou/arrow/e49d8ae15583ceff03237571569099a6ad62be32/ci/scripts/util_free_space.sh | bash
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
